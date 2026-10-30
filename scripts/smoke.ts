@@ -10,7 +10,9 @@ let calls = 0;
 const runtime = realModel();
 const schema = Type.Object({ stage: Type.Integer(), token: Type.Optional(Type.String()) });
 const probe: AgentTool<typeof schema> = {
-  name: 'probe', label: 'probe', description: 'Stage 1 returns a token; stage 2 requires that token.',
+  name: 'probe',
+  label: 'probe',
+  description: 'Stage 1 returns a token; stage 2 requires that token.',
   parameters: schema,
   execute: async (_id, args) => {
     calls++;
@@ -20,23 +22,38 @@ const probe: AgentTool<typeof schema> = {
   },
 };
 const agent = new Agent({
-  streamFn: runtime.streamFn, onPayload: requestPayload, toolExecution: 'sequential',
+  streamFn: runtime.streamFn,
+  onPayload: requestPayload,
+  toolExecution: 'sequential',
   initialState: {
     model: runtime.model,
-    systemPrompt: 'Compatibility probe. Call probe with stage=1. Observe its result, then call probe with stage=2 and the observed token. After the second result, say done. Never fabricate results.',
+    systemPrompt:
+      'Compatibility probe. Call probe with stage=1. Observe its result, then call probe with stage=2 and the observed token. After the second result, say done. Never fabricate results.',
     tools: [probe],
   },
-  finishTurn: () => calls >= 2 ? { action: 'end' } : undefined,
+  finishTurn: () => (calls >= 2 ? { action: 'end' } : undefined),
 });
 const timer = setTimeout(() => agent.abort(), 90000);
-agent.subscribe(event => {
-  if (event.type === 'tool_execution_start') events.push({ type: event.type, tool: event.toolName, args: event.args });
-  if (event.type === 'tool_execution_end') events.push({ type: event.type, result: event.result.details, error: event.isError });
+agent.subscribe((event) => {
+  if (event.type === 'tool_execution_start')
+    events.push({ type: event.type, tool: event.toolName, args: event.args });
+  if (event.type === 'tool_execution_end')
+    events.push({ type: event.type, result: event.result.details, error: event.isError });
 });
 try {
   await agent.prompt('Run the two-stage probe, one tool call per response.');
-  assert.equal(calls, 2, safeError(agent.state.errorMessage || 'Two dependent tool calls required'));
-  const result = { passed: true, provider: 'zhipu', model: process.env.ZHIPU_MODEL || 'glm-4.5-air', durationMs: Date.now() - started, events };
+  assert.equal(
+    calls,
+    2,
+    safeError(agent.state.errorMessage || 'Two dependent tool calls required'),
+  );
+  const result = {
+    passed: true,
+    provider: 'zhipu',
+    model: process.env.ZHIPU_MODEL || 'glm-4.5-air',
+    durationMs: Date.now() - started,
+    events,
+  };
   await mkdir('examples', { recursive: true });
   await writeFile('examples/compatibility.json', JSON.stringify(result, null, 2) + '\n');
   console.log(JSON.stringify(result, null, 2));

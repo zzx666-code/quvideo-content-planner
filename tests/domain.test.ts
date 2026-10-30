@@ -3,14 +3,27 @@ import test from 'node:test';
 import { assess, loadDataset, validateRequest } from '../src/domain.ts';
 
 const now = new Date('2026-10-30T12:00:00Z');
-const input = { requestId: 'normal', topic: '字幕功能推广', budget: 10, deadline: '2026-10-31T12:00:00Z' };
+const input = {
+  requestId: 'normal',
+  topic: '字幕功能推广',
+  budget: 10,
+  deadline: '2026-10-31T12:00:00Z',
+};
 test('missing budget and deadline are separately identified; zero budget remains valid', () => {
   assert.match(validateRequest({ ...input, budget: undefined }).issues.join(), /budget/);
   assert.match(validateRequest({ ...input, deadline: undefined }).issues.join(), /deadline/);
   assert.equal(validateRequest({ ...input, budget: 0 }).issues.length, 0);
 });
 test('unsafe IDs, nonfinite budgets, invalid timezone dates and malformed bodies are rejected', () => {
-  for (const value of [null, [], { ...input, requestId: '../escape' }, { ...input, budget: Infinity }, { ...input, deadline: 'tomorrow' }, { ...input, deadline: '2026-10-31T12:00:00' }]) {
+  for (const value of [
+    null,
+    [],
+    { ...input, requestId: '../escape' },
+    { ...input, budget: Infinity },
+    { ...input, deadline: 'tomorrow' },
+    { ...input, deadline: '2026-10-31T12:00:00' },
+    { ...input, deadline: '2026-02-30T12:00:00Z' },
+  ]) {
     assert.ok(validateRequest(value).issues.length > 0);
   }
 });
@@ -27,6 +40,18 @@ test('costs use catalog data: premium is 12 and balanced is 8; changed prices al
 });
 test('deadline uses estimated sequential work duration and rejects expired deadlines', async () => {
   const data = await loadDataset();
-  assert.equal(assess('premium', ['A01'], { ...input, budget: 20, deadline: '2026-10-30T12:30:00Z' }, data, now).feasible, false);
-  assert.equal(assess('economy', ['A01'], { ...input, deadline: '2026-10-30T11:59:00Z' }, data, now).feasible, false);
+  assert.equal(
+    assess(
+      'premium',
+      ['A01'],
+      { ...input, budget: 20, deadline: '2026-10-30T12:30:00Z' },
+      data,
+      now,
+    ).feasible,
+    false,
+  );
+  assert.equal(
+    assess('economy', ['A01'], { ...input, deadline: '2026-10-30T11:59:00Z' }, data, now).feasible,
+    false,
+  );
 });
