@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "provider": "zhipu",
+  "model": "glm-4.5-air",
+  "durationMs": 1781,
+  "events": [
+    {
+      "type": "tool_execution_start",
+      "tool": "probe",
+      "args": {
+        "stage": 1
+      }
+    },
+    {
+      "type": "tool_execution_end",
+      "result": {
+        "stage": 1,
+        "token": "observation-47",
+        "ok": true
+      },
+      "error": false
+    },
+    {
+      "type": "tool_execution_start",
+      "tool": "probe",
+      "args": {
+        "stage": 2,
+        "token": "observation-47"
+      }
+    },
+    {
+      "type": "tool_execution_end",
+      "result": {
+        "stage": 2,
+        "token": "observation-47",
+        "ok": true
+      },
+      "error": false
+    }
+  ]
+}
