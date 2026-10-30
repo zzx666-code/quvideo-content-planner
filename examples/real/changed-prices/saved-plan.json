@@ -1,0 +1,85 @@
+{
+  "id": "P-real-changed-prices",
+  "request": {
+    "requestId": "real-changed-prices",
+    "topic": "字幕功能推广活动",
+    "budget": 10,
+    "deadline": "2030-10-31T10:00:00.000Z",
+    "preferredStrategy": "premium"
+  },
+  "requestHash": "c3d653a339d8509eb3c4a1126a8e64dc4a03a08e39a427a3a55175943fa341c3",
+  "dataHash": "33af6a21cbb5ada2a61e865f3262a34e01eefeb9c94d6ec38329eefb2f2dbfe6",
+  "script": {
+    "id": "S-4951fcc1ea8b",
+    "title": "字幕功能推广活动",
+    "strategy": "economy",
+    "assetIds": [
+      "A01"
+    ],
+    "scenes": [
+      {
+        "order": 1,
+        "assetId": "A01",
+        "visual": "字幕演示素材：展示功能操作",
+        "narration": "演示产品支持为视频添加字幕。"
+      }
+    ]
+  },
+  "assessment": {
+    "strategy": "economy",
+    "lines": [
+      {
+        "item": "素材 A01",
+        "cost": 0,
+        "minutes": 0
+      },
+      {
+        "item": "脚本制作",
+        "cost": 1,
+        "minutes": 10
+      },
+      {
+        "item": "简洁图文",
+        "cost": 3,
+        "minutes": 20
+      }
+    ],
+    "totalCost": 4,
+    "durationMinutes": 30,
+    "projectedFinish": "2026-10-30T12:30:00.000Z",
+    "overBudget": 0,
+    "lateMinutes": 0,
+    "feasible": true
+  },
+  "savedAt": "2026-10-30T12:00:00.000Z",
+  "activities": [
+    {
+      "id": "activity-1",
+      "task": "素材 A01",
+      "status": "planned",
+      "dependsOn": [],
+      "cost": 0,
+      "minutes": 0
+    },
+    {
+      "id": "activity-2",
+      "task": "脚本制作",
+      "status": "planned",
+      "dependsOn": [
+        "activity-1"
+      ],
+      "cost": 1,
+      "minutes": 10
+    },
+    {
+      "id": "activity-3",
+      "task": "简洁图文",
+      "status": "planned",
+      "dependsOn": [
+        "activity-2"
+      ],
+      "cost": 3,
+      "minutes": 20
+    }
+  ]
+}

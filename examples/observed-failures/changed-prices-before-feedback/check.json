@@ -1,0 +1,12 @@
+{
+  "name": "changed-prices",
+  "passed": false,
+  "expected": "completed",
+  "actual": "incomplete",
+  "code": "REPLAN_REQUIRED",
+  "cost": 12,
+  "turns": 4,
+  "toolCalls": 3,
+  "durationMs": 4470,
+  "error": "Expected values to be strictly equal:\n+ actual - expected\n\n+ 'incomplete'\n- 'completed'\n"
+}

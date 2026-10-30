@@ -1,0 +1,10 @@
+{
+  "name": "missing-deadline",
+  "passed": true,
+  "expected": "needs_input",
+  "actual": "needs_input",
+  "code": "NEEDS_INPUT",
+  "turns": 0,
+  "toolCalls": 0,
+  "durationMs": 0
+}

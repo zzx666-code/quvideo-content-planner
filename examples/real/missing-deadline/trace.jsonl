@@ -1,0 +1,1 @@
+{"seq":1,"at":"2026-10-30T13:10:40.239Z","event":"precheck","turn":0,"result":{"issues":["deadline: a valid ISO date with seconds and explicit timezone is required"]}}

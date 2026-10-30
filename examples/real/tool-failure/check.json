@@ -1,0 +1,11 @@
+{
+  "name": "tool-failure",
+  "passed": true,
+  "expected": "completed",
+  "actual": "completed",
+  "code": "COMPLETED",
+  "cost": 8,
+  "turns": 7,
+  "toolCalls": 7,
+  "durationMs": 8100
+}

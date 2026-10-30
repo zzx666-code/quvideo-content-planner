@@ -1,0 +1,10 @@
+{
+  "name": "tool-limit",
+  "passed": true,
+  "expected": "incomplete",
+  "actual": "incomplete",
+  "code": "TOOL_LIMIT",
+  "turns": 2,
+  "toolCalls": 1,
+  "durationMs": 5
+}

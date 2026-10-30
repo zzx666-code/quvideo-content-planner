@@ -1,0 +1,7 @@
+{
+  "requestId": "offline-deadline-failure",
+  "topic": "字幕功能推广活动",
+  "budget": 10,
+  "deadline": "2026-10-30T12:10:00Z",
+  "preferredStrategy": "premium"
+}

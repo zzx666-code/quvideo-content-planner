@@ -1,0 +1,209 @@
+{
+  "scripts": [],
+  "attempts": [
+    {
+      "id": 1,
+      "tool": "search_assets",
+      "status": "succeeded",
+      "arguments": {
+        "query": "字幕功能推广活动",
+        "reason": "先检索主题相关的合成素材。"
+      },
+      "summary": "{\"ok\":true,\"assets\":[{\"id\":\"A01\",\"title\":\"字幕演示素材\",\"tags\":[\"字幕\",\"subtitle\",\"短视频\",\"视频\",\"内容\",\"活动\"],\"facts\":[\"演示产品支持为视频添加字幕。\"],\"licenseCost\":0},{\"id\":\"A02\",\"title\":\"标题模板素材\",\"tags\":[\"标题\",\"template\",\"短视频\",\"内容\",\"活动\"],\"facts\":[\"合成演示产品提供三种标题模板。\"],\"licenseCost\":0},{\"id\":\"A03\",\"title\":\"画面裁剪素材\",\"tags\":[\"裁剪\",\"画面\",\"视频\",\"内容\",\"活动\"],\"facts\":[\"演示产品支持调整视频画面裁剪区域。\"],\"licenseCost\":0}],\"count\":3,\"synthetic\":true,\"dataVersion\":\"2026-10-30-v1\"}",
+      "at": "2026-10-30T13:10:28.546Z",
+      "result": {
+        "ok": true,
+        "assets": [
+          {
+            "id": "A01",
+            "title": "字幕演示素材",
+            "tags": [
+              "字幕",
+              "subtitle",
+              "短视频",
+              "视频",
+              "内容",
+              "活动"
+            ],
+            "facts": [
+              "演示产品支持为视频添加字幕。"
+            ],
+            "licenseCost": 0
+          },
+          {
+            "id": "A02",
+            "title": "标题模板素材",
+            "tags": [
+              "标题",
+              "template",
+              "短视频",
+              "内容",
+              "活动"
+            ],
+            "facts": [
+              "合成演示产品提供三种标题模板。"
+            ],
+            "licenseCost": 0
+          },
+          {
+            "id": "A03",
+            "title": "画面裁剪素材",
+            "tags": [
+              "裁剪",
+              "画面",
+              "视频",
+              "内容",
+              "活动"
+            ],
+            "facts": [
+              "演示产品支持调整视频画面裁剪区域。"
+            ],
+            "licenseCost": 0
+          }
+        ],
+        "count": 3,
+        "synthetic": true,
+        "dataVersion": "2026-10-30-v1"
+      }
+    }
+  ],
+  "trace": [
+    {
+      "event": "request",
+      "result": {
+        "input": {
+          "requestId": "offline-turn-limit",
+          "topic": "字幕功能推广活动",
+          "budget": 10,
+          "deadline": "2030-10-31T10:00:00.000Z",
+          "preferredStrategy": "premium"
+        },
+        "dataHash": "50ed5436a74593d7d5e3ea599e2506418b1758ac8c4413403ecc9da3593a517d",
+        "mode": "offline"
+      },
+      "seq": 1,
+      "at": "2026-10-30T13:10:28.545Z",
+      "turn": 0
+    },
+    {
+      "event": "model_action",
+      "tool": "search_assets",
+      "arguments": {
+        "query": "字幕功能推广活动",
+        "reason": "先检索主题相关的合成素材。"
+      },
+      "reason": "先检索主题相关的合成素材。",
+      "seq": 2,
+      "at": "2026-10-30T13:10:28.546Z",
+      "turn": 1
+    },
+    {
+      "event": "tool_result",
+      "tool": "search_assets",
+      "result": {
+        "ok": true,
+        "assets": [
+          {
+            "id": "A01",
+            "title": "字幕演示素材",
+            "tags": [
+              "字幕",
+              "subtitle",
+              "短视频",
+              "视频",
+              "内容",
+              "活动"
+            ],
+            "facts": [
+              "演示产品支持为视频添加字幕。"
+            ],
+            "licenseCost": 0
+          },
+          {
+            "id": "A02",
+            "title": "标题模板素材",
+            "tags": [
+              "标题",
+              "template",
+              "短视频",
+              "内容",
+              "活动"
+            ],
+            "facts": [
+              "合成演示产品提供三种标题模板。"
+            ],
+            "licenseCost": 0
+          },
+          {
+            "id": "A03",
+            "title": "画面裁剪素材",
+            "tags": [
+              "裁剪",
+              "画面",
+              "视频",
+              "内容",
+              "活动"
+            ],
+            "facts": [
+              "演示产品支持调整视频画面裁剪区域。"
+            ],
+            "licenseCost": 0
+          }
+        ],
+        "count": 3,
+        "synthetic": true,
+        "dataVersion": "2026-10-30-v1"
+      },
+      "seq": 3,
+      "at": "2026-10-30T13:10:28.548Z",
+      "turn": 1
+    },
+    {
+      "event": "limit",
+      "reason": "TURN_LIMIT",
+      "seq": 4,
+      "at": "2026-10-30T13:10:28.548Z",
+      "turn": 1
+    },
+    {
+      "event": "task_end",
+      "result": {
+        "status": "incomplete",
+        "code": "TURN_LIMIT"
+      },
+      "reason": "达到执行限制：TURN_LIMIT，返回未完成并保留成功结果。",
+      "seq": 5,
+      "at": "2026-10-30T13:10:28.548Z",
+      "turn": 1
+    }
+  ],
+  "metrics": {
+    "turns": 1,
+    "toolCalls": 1,
+    "durationMs": 4,
+    "inputTokens": 742,
+    "outputTokens": 15,
+    "apiCost": null
+  },
+  "model": {
+    "mode": "offline",
+    "provider": "offline",
+    "id": "deterministic-policy"
+  },
+  "clock": {
+    "source": "fixed",
+    "asOf": "2026-10-30T12:00:00.000Z"
+  },
+  "datasetVersion": "2026-10-30-v1",
+  "input": {
+    "requestId": "offline-turn-limit",
+    "topic": "字幕功能推广活动",
+    "budget": 10,
+    "deadline": "2030-10-31T10:00:00.000Z",
+    "preferredStrategy": "premium"
+  },
+  "status": "incomplete",
+  "code": "TURN_LIMIT",
+  "reason": "达到执行限制：TURN_LIMIT，返回未完成并保留成功结果。",
+  "resumed": false
+}

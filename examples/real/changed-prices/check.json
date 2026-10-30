@@ -1,0 +1,11 @@
+{
+  "name": "changed-prices",
+  "passed": true,
+  "expected": "completed",
+  "actual": "completed",
+  "code": "COMPLETED",
+  "cost": 4,
+  "turns": 6,
+  "toolCalls": 6,
+  "durationMs": 6412
+}

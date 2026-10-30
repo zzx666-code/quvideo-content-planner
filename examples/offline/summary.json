@@ -1,0 +1,154 @@
+{
+  "implementationHash": "8f9d075726aed0134617166cf893568822b815d22cb1517ddca2661f73dcf691",
+  "sourceManifest": {
+    "package.json": "c712ab34584b70045026c14cf068d763aad48879c6bfd9e7fa3e571c0541991b",
+    "package-lock.json": "edfc155576a88374b0fbcf1999d15364806f35ec63f231b51b5d47fc88f9dd31",
+    "src/agent.ts": "a6889b05a404b837aad5125998373e85528f313c3dbf953dfe24cfa7b6054792",
+    "src/cli.ts": "c11f87a06f088d5fabad290dbcf167c0ed5fc329aa8bb81ea8cad5c563e76d4e",
+    "src/domain.ts": "062289de656e7accfeb0c7e8b0429e910219ab38c902a71a2a9e42587e682e89",
+    "src/model.ts": "eb32a001c40879a4f8bcc4924fa6ca35b3d5a774b5eb87d595b03c20688480ac",
+    "src/offline.ts": "efd22c4c2fcb398cbdded5ff6416364f30b0774caa3ec83d3867729126d894d6",
+    "src/store.ts": "4f8b11c0cabbb07a2b6ddd606c751c55bac8d43b98bc600665cacdc2ff26acad",
+    "src/tools.ts": "18d994458432609cfff8687ec2d8605e6e4b233f9ceda8f5ab2cb19fff19e589",
+    "scripts/evaluate.ts": "eb30ace3e44f413a749c48065af701207d1d6444167a7ef211bfce0408939dfc",
+    "data/dataset.json": "db0c51c140f7b327279660ba75545847a50a040411958ba65a2fce6f34130af4"
+  },
+  "nodeVersion": "v24.19.0",
+  "mode": "offline",
+  "model": "deterministic-policy",
+  "runId": "2026-10-30T13-10-28-305Z",
+  "actualRunAt": "2026-10-30T13:10:28.561Z",
+  "scenarioClock": "2026-10-30T12:00:00Z",
+  "elapsedMs": 251,
+  "passed": true,
+  "cases": [
+    {
+      "name": "normal",
+      "passed": true,
+      "expected": "completed",
+      "actual": "completed",
+      "code": "COMPLETED",
+      "cost": 12,
+      "turns": 4,
+      "toolCalls": 4,
+      "durationMs": 34
+    },
+    {
+      "name": "budget-replan",
+      "passed": true,
+      "expected": "completed",
+      "actual": "completed",
+      "code": "COMPLETED",
+      "cost": 8,
+      "turns": 6,
+      "toolCalls": 6,
+      "durationMs": 42
+    },
+    {
+      "name": "missing-budget",
+      "passed": true,
+      "expected": "needs_input",
+      "actual": "needs_input",
+      "code": "NEEDS_INPUT",
+      "turns": 0,
+      "toolCalls": 0,
+      "durationMs": 0
+    },
+    {
+      "name": "missing-deadline",
+      "passed": true,
+      "expected": "needs_input",
+      "actual": "needs_input",
+      "code": "NEEDS_INPUT",
+      "turns": 0,
+      "toolCalls": 0,
+      "durationMs": 0
+    },
+    {
+      "name": "tool-failure",
+      "passed": true,
+      "expected": "completed",
+      "actual": "completed",
+      "code": "COMPLETED",
+      "cost": 8,
+      "turns": 7,
+      "toolCalls": 7,
+      "durationMs": 22
+    },
+    {
+      "name": "changed-prices",
+      "passed": true,
+      "expected": "completed",
+      "actual": "completed",
+      "code": "COMPLETED",
+      "cost": 4,
+      "turns": 6,
+      "toolCalls": 6,
+      "durationMs": 19
+    },
+    {
+      "name": "no-feasible-plan",
+      "passed": true,
+      "expected": "incomplete",
+      "actual": "incomplete",
+      "code": "NO_FEASIBLE_PLAN",
+      "cost": 12,
+      "turns": 4,
+      "toolCalls": 3,
+      "durationMs": 9
+    },
+    {
+      "name": "deadline-failure",
+      "passed": true,
+      "expected": "incomplete",
+      "actual": "incomplete",
+      "code": "NO_FEASIBLE_PLAN",
+      "cost": 12,
+      "turns": 4,
+      "toolCalls": 3,
+      "durationMs": 10
+    },
+    {
+      "name": "no-materials",
+      "passed": true,
+      "expected": "incomplete",
+      "actual": "incomplete",
+      "code": "NO_MATERIALS",
+      "turns": 3,
+      "toolCalls": 2,
+      "durationMs": 6
+    },
+    {
+      "name": "save-failure",
+      "passed": true,
+      "expected": "incomplete",
+      "actual": "incomplete",
+      "code": "TOOL_FAILURE",
+      "cost": 8,
+      "turns": 7,
+      "toolCalls": 6,
+      "durationMs": 16
+    },
+    {
+      "name": "turn-limit",
+      "passed": true,
+      "expected": "incomplete",
+      "actual": "incomplete",
+      "code": "TURN_LIMIT",
+      "turns": 1,
+      "toolCalls": 1,
+      "durationMs": 4
+    },
+    {
+      "name": "tool-limit",
+      "passed": true,
+      "expected": "incomplete",
+      "actual": "incomplete",
+      "code": "TOOL_LIMIT",
+      "turns": 2,
+      "toolCalls": 1,
+      "durationMs": 5
+    }
+  ],
+  "note": "Deterministic simulation validates workflow, not real model decisions."
+}

@@ -1,0 +1,162 @@
+{
+  "scripts": [],
+  "attempts": [
+    {
+      "id": 1,
+      "tool": "search_assets",
+      "status": "succeeded",
+      "arguments": {
+        "query": "字幕功能推广活动",
+        "reason": "先检索主题相关的合成素材。"
+      },
+      "summary": "{\"ok\":true,\"assets\":[],\"count\":0,\"synthetic\":true,\"dataVersion\":\"2026-10-30-v1-empty\"}",
+      "at": "2026-10-30T13:10:28.505Z",
+      "result": {
+        "ok": true,
+        "assets": [],
+        "count": 0,
+        "synthetic": true,
+        "dataVersion": "2026-10-30-v1-empty"
+      }
+    },
+    {
+      "id": 2,
+      "tool": "search_assets",
+      "status": "succeeded",
+      "arguments": {
+        "query": "内容",
+        "reason": "首次检索无结果，改写查询补查。"
+      },
+      "summary": "{\"ok\":true,\"assets\":[],\"count\":0,\"synthetic\":true,\"dataVersion\":\"2026-10-30-v1-empty\"}",
+      "at": "2026-10-30T13:10:28.508Z",
+      "result": {
+        "ok": true,
+        "assets": [],
+        "count": 0,
+        "synthetic": true,
+        "dataVersion": "2026-10-30-v1-empty"
+      }
+    }
+  ],
+  "trace": [
+    {
+      "event": "request",
+      "result": {
+        "input": {
+          "requestId": "offline-no-materials",
+          "topic": "字幕功能推广活动",
+          "budget": 10,
+          "deadline": "2030-10-31T10:00:00.000Z",
+          "preferredStrategy": "premium"
+        },
+        "dataHash": "8cf26a0e15e80c6925b5a0731776af688c9b932365cb114e7244081ecdcf578f",
+        "mode": "offline"
+      },
+      "seq": 1,
+      "at": "2026-10-30T13:10:28.504Z",
+      "turn": 0
+    },
+    {
+      "event": "model_action",
+      "tool": "search_assets",
+      "arguments": {
+        "query": "字幕功能推广活动",
+        "reason": "先检索主题相关的合成素材。"
+      },
+      "reason": "先检索主题相关的合成素材。",
+      "seq": 2,
+      "at": "2026-10-30T13:10:28.505Z",
+      "turn": 1
+    },
+    {
+      "event": "tool_result",
+      "tool": "search_assets",
+      "result": {
+        "ok": true,
+        "assets": [],
+        "count": 0,
+        "synthetic": true,
+        "dataVersion": "2026-10-30-v1-empty"
+      },
+      "seq": 3,
+      "at": "2026-10-30T13:10:28.507Z",
+      "turn": 1
+    },
+    {
+      "event": "model_action",
+      "tool": "search_assets",
+      "arguments": {
+        "query": "内容",
+        "reason": "首次检索无结果，改写查询补查。"
+      },
+      "reason": "首次检索无结果，改写查询补查。",
+      "seq": 4,
+      "at": "2026-10-30T13:10:28.508Z",
+      "turn": 2
+    },
+    {
+      "event": "tool_result",
+      "tool": "search_assets",
+      "result": {
+        "ok": true,
+        "assets": [],
+        "count": 0,
+        "synthetic": true,
+        "dataVersion": "2026-10-30-v1-empty"
+      },
+      "seq": 5,
+      "at": "2026-10-30T13:10:28.510Z",
+      "turn": 2
+    },
+    {
+      "event": "model_stop",
+      "result": {
+        "publicSummary": "两次检索无素材，请补充资料。",
+        "stopReason": "stop"
+      },
+      "seq": 6,
+      "at": "2026-10-30T13:10:28.510Z",
+      "turn": 3
+    },
+    {
+      "event": "task_end",
+      "result": {
+        "status": "incomplete",
+        "code": "NO_MATERIALS"
+      },
+      "reason": "检索未找到可用素材，请补充资料或修改主题。",
+      "seq": 7,
+      "at": "2026-10-30T13:10:28.510Z",
+      "turn": 3
+    }
+  ],
+  "metrics": {
+    "turns": 3,
+    "toolCalls": 2,
+    "durationMs": 6,
+    "inputTokens": 2366,
+    "outputTokens": 33,
+    "apiCost": null
+  },
+  "model": {
+    "mode": "offline",
+    "provider": "offline",
+    "id": "deterministic-policy"
+  },
+  "clock": {
+    "source": "fixed",
+    "asOf": "2026-10-30T12:00:00.000Z"
+  },
+  "datasetVersion": "2026-10-30-v1-empty",
+  "input": {
+    "requestId": "offline-no-materials",
+    "topic": "字幕功能推广活动",
+    "budget": 10,
+    "deadline": "2030-10-31T10:00:00.000Z",
+    "preferredStrategy": "premium"
+  },
+  "status": "incomplete",
+  "code": "NO_MATERIALS",
+  "reason": "检索未找到可用素材，请补充资料或修改主题。",
+  "resumed": false
+}

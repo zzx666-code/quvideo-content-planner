@@ -1,0 +1,11 @@
+{
+  "name": "deadline-failure",
+  "passed": true,
+  "expected": "incomplete",
+  "actual": "incomplete",
+  "code": "NO_FEASIBLE_PLAN",
+  "cost": 12,
+  "turns": 4,
+  "toolCalls": 3,
+  "durationMs": 10
+}

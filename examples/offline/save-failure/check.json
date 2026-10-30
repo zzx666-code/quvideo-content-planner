@@ -1,0 +1,11 @@
+{
+  "name": "save-failure",
+  "passed": true,
+  "expected": "incomplete",
+  "actual": "incomplete",
+  "code": "TOOL_FAILURE",
+  "cost": 8,
+  "turns": 7,
+  "toolCalls": 6,
+  "durationMs": 16
+}

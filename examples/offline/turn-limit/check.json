@@ -1,0 +1,10 @@
+{
+  "name": "turn-limit",
+  "passed": true,
+  "expected": "incomplete",
+  "actual": "incomplete",
+  "code": "TURN_LIMIT",
+  "turns": 1,
+  "toolCalls": 1,
+  "durationMs": 4
+}

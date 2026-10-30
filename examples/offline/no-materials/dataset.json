@@ -1,0 +1,29 @@
+{
+  "synthetic": true,
+  "version": "2026-10-30-v1-empty",
+  "budgetUnit": "simulated units; proposed plan cost, not actual tool/API spending",
+  "assets": [],
+  "strategies": {
+    "premium": {
+      "label": "精制演示",
+      "scriptCost": 4,
+      "productionCost": 8,
+      "scriptMinutes": 20,
+      "productionMinutes": 70
+    },
+    "balanced": {
+      "label": "标准演示",
+      "scriptCost": 3,
+      "productionCost": 5,
+      "scriptMinutes": 15,
+      "productionMinutes": 45
+    },
+    "economy": {
+      "label": "简洁图文",
+      "scriptCost": 1,
+      "productionCost": 3,
+      "scriptMinutes": 10,
+      "productionMinutes": 20
+    }
+  }
+}

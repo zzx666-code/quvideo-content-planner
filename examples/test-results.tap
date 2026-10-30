@@ -1,0 +1,136 @@
+TAP version 13
+# Subtest: missing budget and deadline are separately identified; zero budget remains valid
+ok 1 - missing budget and deadline are separately identified; zero budget remains valid
+  ---
+  duration_ms: 1.4913
+  type: 'test'
+  ...
+# Subtest: unsafe IDs, nonfinite budgets, invalid timezone dates and malformed bodies are rejected
+ok 2 - unsafe IDs, nonfinite budgets, invalid timezone dates and malformed bodies are rejected
+  ---
+  duration_ms: 0.2408
+  type: 'test'
+  ...
+# Subtest: costs use catalog data: premium is 12 and balanced is 8; changed prices alter feasibility
+ok 3 - costs use catalog data: premium is 12 and balanced is 8; changed prices alter feasibility
+  ---
+  duration_ms: 3.0399
+  type: 'test'
+  ...
+# Subtest: deadline uses estimated sequential work duration and rejects expired deadlines
+ok 4 - deadline uses estimated sequential work duration and rejects expired deadlines
+  ---
+  duration_ms: 0.8852
+  type: 'test'
+  ...
+# Subtest: model text claiming success never marks an unsaved task completed
+ok 5 - model text claiming success never marks an unsaved task completed
+  ---
+  duration_ms: 15.7092
+  type: 'test'
+  ...
+# Subtest: direct saving without estimating is rejected
+ok 6 - direct saving without estimating is rejected
+  ---
+  duration_ms: 22.3896
+  type: 'test'
+  ...
+# Subtest: even an explicit model save call cannot override budget constraints
+ok 7 - even an explicit model save call cannot override budget constraints
+  ---
+  duration_ms: 22.1201
+  type: 'test'
+  ...
+# Subtest: save rechecks deadline after time advances beyond a previously valid estimate
+ok 8 - save rechecks deadline after time advances beyond a previously valid estimate
+  ---
+  duration_ms: 19.2263
+  type: 'test'
+  ...
+# Subtest: tool cap also applies to multiple calls emitted in one model response
+ok 9 - tool cap also applies to multiple calls emitted in one model response
+  ---
+  duration_ms: 9.5948
+  type: 'test'
+  ...
+# Subtest: offline cache cannot masquerade as a real model run in the same storage
+ok 10 - offline cache cannot masquerade as a real model run in the same storage
+  ---
+  duration_ms: 22.6345
+  type: 'test'
+  ...
+# Subtest: saved plan and reported estimate refer to the same selected script
+ok 11 - saved plan and reported estimate refer to the same selected script
+  ---
+  duration_ms: 25.8652
+  type: 'test'
+  ...
+# Subtest: premature stop with a known feasible candidate gets validation feedback and a model-selected correction
+ok 12 - premature stop with a known feasible candidate gets validation feedback and a model-selected correction
+  ---
+  duration_ms: 29.1463
+  type: 'test'
+  ...
+# Subtest: normal request saves a real plan; repeat reuses it, changed request conflicts
+ok 13 - normal request saves a real plan; repeat reuses it, changed request conflicts
+  ---
+  duration_ms: 40.7989
+  type: 'test'
+  ...
+# Subtest: budget rejection leads to a feasible alternative using actual catalog results
+ok 14 - budget rejection leads to a feasible alternative using actual catalog results
+  ---
+  duration_ms: 28.7604
+  type: 'test'
+  ...
+# Subtest: missing budget and missing deadline never invoke a model or save a plan
+ok 15 - missing budget and missing deadline never invoke a model or save a plan
+  ---
+  duration_ms: 1.4411
+  type: 'test'
+  ...
+# Subtest: one tool failure is visible, recovery preserves earlier successful retrieval
+ok 16 - one tool failure is visible, recovery preserves earlier successful retrieval
+  ---
+  duration_ms: 30.7069
+  type: 'test'
+  ...
+# Subtest: permanent save failure never reports completion; explicit resume reuses the script
+ok 17 - permanent save failure never reports completion; explicit resume reuses the script
+  ---
+  duration_ms: 38.1154
+  type: 'test'
+  ...
+# Subtest: no feasible budget, expired deadline and no materials remain incomplete
+ok 18 - no feasible budget, expired deadline and no materials remain incomplete
+  ---
+  duration_ms: 42.0863
+  type: 'test'
+  ...
+# Subtest: a stalled provider is aborted at the wall-clock timeout
+ok 19 - a stalled provider is aborted at the wall-clock timeout
+  ---
+  duration_ms: 37.5274
+  type: 'test'
+  ...
+# Subtest: model turns and actual tool executions are independently bounded
+ok 20 - model turns and actual tool executions are independently bounded
+  ---
+  duration_ms: 14.1249
+  type: 'test'
+  ...
+# Subtest: an actual filesystem save error remains incomplete and retains generated scripts
+ok 21 - an actual filesystem save error remains incomplete and retains generated scripts
+  ---
+  duration_ms: 23.6986
+  type: 'test'
+  ...
+1..21
+# tests 21
+# suites 0
+# pass 21
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 678.7211

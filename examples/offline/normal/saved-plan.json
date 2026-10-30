@@ -1,0 +1,85 @@
+{
+  "id": "P-offline-normal",
+  "request": {
+    "requestId": "offline-normal",
+    "topic": "字幕功能推广活动",
+    "budget": 20,
+    "deadline": "2030-10-31T10:00:00.000Z",
+    "preferredStrategy": "premium"
+  },
+  "requestHash": "93ca4763af22f0b09cd2407756d449d19b358d7bb5c85be68fcda760990c8386",
+  "dataHash": "50ed5436a74593d7d5e3ea599e2506418b1758ac8c4413403ecc9da3593a517d",
+  "script": {
+    "id": "S-278a464a934d",
+    "title": "字幕功能推广活动",
+    "strategy": "premium",
+    "assetIds": [
+      "A01"
+    ],
+    "scenes": [
+      {
+        "order": 1,
+        "assetId": "A01",
+        "visual": "字幕演示素材：展示功能操作",
+        "narration": "演示产品支持为视频添加字幕。"
+      }
+    ]
+  },
+  "assessment": {
+    "strategy": "premium",
+    "lines": [
+      {
+        "item": "素材 A01",
+        "cost": 0,
+        "minutes": 0
+      },
+      {
+        "item": "脚本制作",
+        "cost": 4,
+        "minutes": 20
+      },
+      {
+        "item": "精制演示",
+        "cost": 8,
+        "minutes": 70
+      }
+    ],
+    "totalCost": 12,
+    "durationMinutes": 90,
+    "projectedFinish": "2026-10-30T13:30:00.000Z",
+    "overBudget": 0,
+    "lateMinutes": 0,
+    "feasible": true
+  },
+  "savedAt": "2026-10-30T12:00:00.000Z",
+  "activities": [
+    {
+      "id": "activity-1",
+      "task": "素材 A01",
+      "status": "planned",
+      "dependsOn": [],
+      "cost": 0,
+      "minutes": 0
+    },
+    {
+      "id": "activity-2",
+      "task": "脚本制作",
+      "status": "planned",
+      "dependsOn": [
+        "activity-1"
+      ],
+      "cost": 4,
+      "minutes": 20
+    },
+    {
+      "id": "activity-3",
+      "task": "精制演示",
+      "status": "planned",
+      "dependsOn": [
+        "activity-2"
+      ],
+      "cost": 8,
+      "minutes": 70
+    }
+  ]
+}

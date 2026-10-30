@@ -1,0 +1,41 @@
+{
+  "scripts": [],
+  "attempts": [],
+  "trace": [
+    {
+      "seq": 1,
+      "at": "2026-10-30T13:10:28.418Z",
+      "event": "precheck",
+      "turn": 0,
+      "result": {
+        "issues": [
+          "deadline: a valid ISO date with seconds and explicit timezone is required"
+        ]
+      }
+    }
+  ],
+  "metrics": {
+    "turns": 0,
+    "toolCalls": 0,
+    "durationMs": 0,
+    "inputTokens": 0,
+    "outputTokens": 0,
+    "apiCost": null
+  },
+  "model": {
+    "mode": "offline",
+    "provider": "offline",
+    "id": "deterministic-policy"
+  },
+  "clock": {
+    "source": "fixed",
+    "asOf": "2026-10-30T12:00:00.000Z"
+  },
+  "datasetVersion": "2026-10-30-v1",
+  "status": "needs_input",
+  "code": "NEEDS_INPUT",
+  "reason": "补全或修正输入后再执行。",
+  "issues": [
+    "deadline: a valid ISO date with seconds and explicit timezone is required"
+  ]
+}

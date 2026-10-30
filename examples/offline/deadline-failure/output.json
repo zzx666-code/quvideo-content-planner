@@ -1,0 +1,600 @@
+{
+  "scripts": [
+    {
+      "id": "S-278a464a934d",
+      "title": "字幕功能推广活动",
+      "strategy": "premium",
+      "assetIds": [
+        "A01"
+      ],
+      "scenes": [
+        {
+          "order": 1,
+          "assetId": "A01",
+          "visual": "字幕演示素材：展示功能操作",
+          "narration": "演示产品支持为视频添加字幕。"
+        }
+      ]
+    }
+  ],
+  "attempts": [
+    {
+      "id": 1,
+      "tool": "search_assets",
+      "status": "succeeded",
+      "arguments": {
+        "query": "字幕功能推广活动",
+        "reason": "先检索主题相关的合成素材。"
+      },
+      "summary": "{\"ok\":true,\"assets\":[{\"id\":\"A01\",\"title\":\"字幕演示素材\",\"tags\":[\"字幕\",\"subtitle\",\"短视频\",\"视频\",\"内容\",\"活动\"],\"facts\":[\"演示产品支持为视频添加字幕。\"],\"licenseCost\":0},{\"id\":\"A02\",\"title\":\"标题模板素材\",\"tags\":[\"标题\",\"template\",\"短视频\",\"内容\",\"活动\"],\"facts\":[\"合成演示产品提供三种标题模板。\"],\"licenseCost\":0},{\"id\":\"A03\",\"title\":\"画面裁剪素材\",\"tags\":[\"裁剪\",\"画面\",\"视频\",\"内容\",\"活动\"],\"facts\":[\"演示产品支持调整视频画面裁剪区域。\"],\"licenseCost\":0}],\"count\":3,\"synthetic\":true,\"dataVersion\":\"2026-10-30-v1\"}",
+      "at": "2026-10-30T13:10:28.490Z",
+      "result": {
+        "ok": true,
+        "assets": [
+          {
+            "id": "A01",
+            "title": "字幕演示素材",
+            "tags": [
+              "字幕",
+              "subtitle",
+              "短视频",
+              "视频",
+              "内容",
+              "活动"
+            ],
+            "facts": [
+              "演示产品支持为视频添加字幕。"
+            ],
+            "licenseCost": 0
+          },
+          {
+            "id": "A02",
+            "title": "标题模板素材",
+            "tags": [
+              "标题",
+              "template",
+              "短视频",
+              "内容",
+              "活动"
+            ],
+            "facts": [
+              "合成演示产品提供三种标题模板。"
+            ],
+            "licenseCost": 0
+          },
+          {
+            "id": "A03",
+            "title": "画面裁剪素材",
+            "tags": [
+              "裁剪",
+              "画面",
+              "视频",
+              "内容",
+              "活动"
+            ],
+            "facts": [
+              "演示产品支持调整视频画面裁剪区域。"
+            ],
+            "licenseCost": 0
+          }
+        ],
+        "count": 3,
+        "synthetic": true,
+        "dataVersion": "2026-10-30-v1"
+      }
+    },
+    {
+      "id": 2,
+      "tool": "generate_script",
+      "status": "succeeded",
+      "arguments": {
+        "assetIds": [
+          "A01"
+        ],
+        "strategy": "premium",
+        "title": "字幕功能推广活动",
+        "reason": "使用已检索事实和首选制作档位生成初稿。"
+      },
+      "summary": "{\"ok\":true,\"script\":{\"id\":\"S-278a464a934d\",\"title\":\"字幕功能推广活动\",\"strategy\":\"premium\",\"assetIds\":[\"A01\"],\"scenes\":[{\"order\":1,\"assetId\":\"A01\",\"visual\":\"字幕演示素材：展示功能操作\",\"narration\":\"演示产品支持为视频添加字幕。\"}]},\"simulatedTool\":true,\"note\":\"Local template draft; no video was rendered or published. Title is a creative label, narration facts are verbatim synthetic sources.\"}",
+      "at": "2026-10-30T13:10:28.493Z",
+      "result": {
+        "ok": true,
+        "script": {
+          "id": "S-278a464a934d",
+          "title": "字幕功能推广活动",
+          "strategy": "premium",
+          "assetIds": [
+            "A01"
+          ],
+          "scenes": [
+            {
+              "order": 1,
+              "assetId": "A01",
+              "visual": "字幕演示素材：展示功能操作",
+              "narration": "演示产品支持为视频添加字幕。"
+            }
+          ]
+        },
+        "simulatedTool": true,
+        "note": "Local template draft; no video was rendered or published. Title is a creative label, narration facts are verbatim synthetic sources."
+      }
+    },
+    {
+      "id": 3,
+      "tool": "estimate_plan",
+      "status": "succeeded",
+      "arguments": {
+        "scriptId": "S-278a464a934d",
+        "reason": "获取费用与耗时计算结果后再决定是否保存。"
+      },
+      "summary": "{\"ok\":true,\"assessment\":{\"strategy\":\"premium\",\"lines\":[{\"item\":\"素材 A01\",\"cost\":0,\"minutes\":0},{\"item\":\"脚本制作\",\"cost\":4,\"minutes\":20},{\"item\":\"精制演示\",\"cost\":8,\"minutes\":70}],\"totalCost\":12,\"durationMinutes\":90,\"projectedFinish\":\"2026-10-30T13:30:00.000Z\",\"overBudget\":2,\"lateMinutes\":80,\"feasible\":false,\"scriptId\":\"S-278a464a934d\",\"dataHash\":\"50ed5436a74593d7d5e3ea599e2506418b1758ac8c4413403ecc9da3593a517d\",\"calculatedAt\":\"2026-10-30T12:00:00.000Z\"},\"alternatives\":[{\"strategy\":\"premium\",\"lines\":[{\"item\":\"素材 A01\",\"cost\":0,\"minutes\":0},{\"item\":\"脚本制作\",\"cost\":4,\"minutes\":20},{\"item\":\"精制演示\",\"cost\":8,\"minutes\":70}],\"totalCost\":12,\"durationMinutes\":90,\"projectedFinish\":\"2026-10-30T13:30:00.000Z\",\"overBudget\":2,\"lateMinutes\":80,\"feasible\":false},{\"strategy\":\"balanced\",\"lines\":[{\"item\":\"素材 A01\",\"cost\":0,\"minutes\":0},{\"item\":\"脚本制作\",\"cost\":3,\"minutes\":15},{\"item\":\"标准演示\",\"cost\":5,\"minutes\":45}],\"totalCost\":8,\"durationMinutes\":60,\"projectedFinish\":\"2026-10-30T13:00:00.000Z\",\"overBudget\":0,\"lateMinutes\":50,\"feasible\":false},{\"strategy\":\"economy\",\"lines\":[{\"item\":\"素材 A01\",\"cost\":0,\"minutes\":0},{\"item\":\"脚本制作\",\"cost\":1,\"minutes\":10},{\"item\":\"简洁图文\",\"cost\":3,\"minutes\":20}],\"totalCost\":4,\"durationMinutes\":30,\"projectedFinish\":\"2026-10-30T12:30:00.000Z\",\"overBudget\":0,\"lateMinutes\":20,\"feasible\":false}],\"budgetUnit\":\"simulated units; proposed plan cost, not actual tool/API spending\"}",
+      "at": "2026-10-30T13:10:28.496Z",
+      "result": {
+        "ok": true,
+        "assessment": {
+          "strategy": "premium",
+          "lines": [
+            {
+              "item": "素材 A01",
+              "cost": 0,
+              "minutes": 0
+            },
+            {
+              "item": "脚本制作",
+              "cost": 4,
+              "minutes": 20
+            },
+            {
+              "item": "精制演示",
+              "cost": 8,
+              "minutes": 70
+            }
+          ],
+          "totalCost": 12,
+          "durationMinutes": 90,
+          "projectedFinish": "2026-10-30T13:30:00.000Z",
+          "overBudget": 2,
+          "lateMinutes": 80,
+          "feasible": false,
+          "scriptId": "S-278a464a934d",
+          "dataHash": "50ed5436a74593d7d5e3ea599e2506418b1758ac8c4413403ecc9da3593a517d",
+          "calculatedAt": "2026-10-30T12:00:00.000Z"
+        },
+        "alternatives": [
+          {
+            "strategy": "premium",
+            "lines": [
+              {
+                "item": "素材 A01",
+                "cost": 0,
+                "minutes": 0
+              },
+              {
+                "item": "脚本制作",
+                "cost": 4,
+                "minutes": 20
+              },
+              {
+                "item": "精制演示",
+                "cost": 8,
+                "minutes": 70
+              }
+            ],
+            "totalCost": 12,
+            "durationMinutes": 90,
+            "projectedFinish": "2026-10-30T13:30:00.000Z",
+            "overBudget": 2,
+            "lateMinutes": 80,
+            "feasible": false
+          },
+          {
+            "strategy": "balanced",
+            "lines": [
+              {
+                "item": "素材 A01",
+                "cost": 0,
+                "minutes": 0
+              },
+              {
+                "item": "脚本制作",
+                "cost": 3,
+                "minutes": 15
+              },
+              {
+                "item": "标准演示",
+                "cost": 5,
+                "minutes": 45
+              }
+            ],
+            "totalCost": 8,
+            "durationMinutes": 60,
+            "projectedFinish": "2026-10-30T13:00:00.000Z",
+            "overBudget": 0,
+            "lateMinutes": 50,
+            "feasible": false
+          },
+          {
+            "strategy": "economy",
+            "lines": [
+              {
+                "item": "素材 A01",
+                "cost": 0,
+                "minutes": 0
+              },
+              {
+                "item": "脚本制作",
+                "cost": 1,
+                "minutes": 10
+              },
+              {
+                "item": "简洁图文",
+                "cost": 3,
+                "minutes": 20
+              }
+            ],
+            "totalCost": 4,
+            "durationMinutes": 30,
+            "projectedFinish": "2026-10-30T12:30:00.000Z",
+            "overBudget": 0,
+            "lateMinutes": 20,
+            "feasible": false
+          }
+        ],
+        "budgetUnit": "simulated units; proposed plan cost, not actual tool/API spending"
+      }
+    }
+  ],
+  "trace": [
+    {
+      "event": "request",
+      "result": {
+        "input": {
+          "requestId": "offline-deadline-failure",
+          "topic": "字幕功能推广活动",
+          "budget": 10,
+          "deadline": "2026-10-30T12:10:00.000Z",
+          "preferredStrategy": "premium"
+        },
+        "dataHash": "50ed5436a74593d7d5e3ea599e2506418b1758ac8c4413403ecc9da3593a517d",
+        "mode": "offline"
+      },
+      "seq": 1,
+      "at": "2026-10-30T13:10:28.489Z",
+      "turn": 0
+    },
+    {
+      "event": "model_action",
+      "tool": "search_assets",
+      "arguments": {
+        "query": "字幕功能推广活动",
+        "reason": "先检索主题相关的合成素材。"
+      },
+      "reason": "先检索主题相关的合成素材。",
+      "seq": 2,
+      "at": "2026-10-30T13:10:28.490Z",
+      "turn": 1
+    },
+    {
+      "event": "tool_result",
+      "tool": "search_assets",
+      "result": {
+        "ok": true,
+        "assets": [
+          {
+            "id": "A01",
+            "title": "字幕演示素材",
+            "tags": [
+              "字幕",
+              "subtitle",
+              "短视频",
+              "视频",
+              "内容",
+              "活动"
+            ],
+            "facts": [
+              "演示产品支持为视频添加字幕。"
+            ],
+            "licenseCost": 0
+          },
+          {
+            "id": "A02",
+            "title": "标题模板素材",
+            "tags": [
+              "标题",
+              "template",
+              "短视频",
+              "内容",
+              "活动"
+            ],
+            "facts": [
+              "合成演示产品提供三种标题模板。"
+            ],
+            "licenseCost": 0
+          },
+          {
+            "id": "A03",
+            "title": "画面裁剪素材",
+            "tags": [
+              "裁剪",
+              "画面",
+              "视频",
+              "内容",
+              "活动"
+            ],
+            "facts": [
+              "演示产品支持调整视频画面裁剪区域。"
+            ],
+            "licenseCost": 0
+          }
+        ],
+        "count": 3,
+        "synthetic": true,
+        "dataVersion": "2026-10-30-v1"
+      },
+      "seq": 3,
+      "at": "2026-10-30T13:10:28.493Z",
+      "turn": 1
+    },
+    {
+      "event": "model_action",
+      "tool": "generate_script",
+      "arguments": {
+        "assetIds": [
+          "A01"
+        ],
+        "strategy": "premium",
+        "title": "字幕功能推广活动",
+        "reason": "使用已检索事实和首选制作档位生成初稿。"
+      },
+      "reason": "使用已检索事实和首选制作档位生成初稿。",
+      "seq": 4,
+      "at": "2026-10-30T13:10:28.493Z",
+      "turn": 2
+    },
+    {
+      "event": "tool_result",
+      "tool": "generate_script",
+      "result": {
+        "ok": true,
+        "script": {
+          "id": "S-278a464a934d",
+          "title": "字幕功能推广活动",
+          "strategy": "premium",
+          "assetIds": [
+            "A01"
+          ],
+          "scenes": [
+            {
+              "order": 1,
+              "assetId": "A01",
+              "visual": "字幕演示素材：展示功能操作",
+              "narration": "演示产品支持为视频添加字幕。"
+            }
+          ]
+        },
+        "simulatedTool": true,
+        "note": "Local template draft; no video was rendered or published. Title is a creative label, narration facts are verbatim synthetic sources."
+      },
+      "seq": 5,
+      "at": "2026-10-30T13:10:28.495Z",
+      "turn": 2
+    },
+    {
+      "event": "model_action",
+      "tool": "estimate_plan",
+      "arguments": {
+        "scriptId": "S-278a464a934d",
+        "reason": "获取费用与耗时计算结果后再决定是否保存。"
+      },
+      "reason": "获取费用与耗时计算结果后再决定是否保存。",
+      "seq": 6,
+      "at": "2026-10-30T13:10:28.495Z",
+      "turn": 3
+    },
+    {
+      "event": "tool_result",
+      "tool": "estimate_plan",
+      "result": {
+        "ok": true,
+        "assessment": {
+          "strategy": "premium",
+          "lines": [
+            {
+              "item": "素材 A01",
+              "cost": 0,
+              "minutes": 0
+            },
+            {
+              "item": "脚本制作",
+              "cost": 4,
+              "minutes": 20
+            },
+            {
+              "item": "精制演示",
+              "cost": 8,
+              "minutes": 70
+            }
+          ],
+          "totalCost": 12,
+          "durationMinutes": 90,
+          "projectedFinish": "2026-10-30T13:30:00.000Z",
+          "overBudget": 2,
+          "lateMinutes": 80,
+          "feasible": false,
+          "scriptId": "S-278a464a934d",
+          "dataHash": "50ed5436a74593d7d5e3ea599e2506418b1758ac8c4413403ecc9da3593a517d",
+          "calculatedAt": "2026-10-30T12:00:00.000Z"
+        },
+        "alternatives": [
+          {
+            "strategy": "premium",
+            "lines": [
+              {
+                "item": "素材 A01",
+                "cost": 0,
+                "minutes": 0
+              },
+              {
+                "item": "脚本制作",
+                "cost": 4,
+                "minutes": 20
+              },
+              {
+                "item": "精制演示",
+                "cost": 8,
+                "minutes": 70
+              }
+            ],
+            "totalCost": 12,
+            "durationMinutes": 90,
+            "projectedFinish": "2026-10-30T13:30:00.000Z",
+            "overBudget": 2,
+            "lateMinutes": 80,
+            "feasible": false
+          },
+          {
+            "strategy": "balanced",
+            "lines": [
+              {
+                "item": "素材 A01",
+                "cost": 0,
+                "minutes": 0
+              },
+              {
+                "item": "脚本制作",
+                "cost": 3,
+                "minutes": 15
+              },
+              {
+                "item": "标准演示",
+                "cost": 5,
+                "minutes": 45
+              }
+            ],
+            "totalCost": 8,
+            "durationMinutes": 60,
+            "projectedFinish": "2026-10-30T13:00:00.000Z",
+            "overBudget": 0,
+            "lateMinutes": 50,
+            "feasible": false
+          },
+          {
+            "strategy": "economy",
+            "lines": [
+              {
+                "item": "素材 A01",
+                "cost": 0,
+                "minutes": 0
+              },
+              {
+                "item": "脚本制作",
+                "cost": 1,
+                "minutes": 10
+              },
+              {
+                "item": "简洁图文",
+                "cost": 3,
+                "minutes": 20
+              }
+            ],
+            "totalCost": 4,
+            "durationMinutes": 30,
+            "projectedFinish": "2026-10-30T12:30:00.000Z",
+            "overBudget": 0,
+            "lateMinutes": 20,
+            "feasible": false
+          }
+        ],
+        "budgetUnit": "simulated units; proposed plan cost, not actual tool/API spending"
+      },
+      "seq": 7,
+      "at": "2026-10-30T13:10:28.498Z",
+      "turn": 3
+    },
+    {
+      "event": "model_stop",
+      "result": {
+        "publicSummary": "预算或截止时间不支持任何候选方案，请调整约束。",
+        "stopReason": "stop"
+      },
+      "seq": 8,
+      "at": "2026-10-30T13:10:28.498Z",
+      "turn": 4
+    },
+    {
+      "event": "task_end",
+      "result": {
+        "status": "incomplete",
+        "code": "NO_FEASIBLE_PLAN"
+      },
+      "reason": "尚未保存可行方案。表内最低预算为 4 单位、最短耗时为 30 分钟；预算缺口 0 单位、最小时间缺口 20 分钟。",
+      "seq": 9,
+      "at": "2026-10-30T13:10:28.498Z",
+      "turn": 4
+    }
+  ],
+  "metrics": {
+    "turns": 4,
+    "toolCalls": 3,
+    "durationMs": 10,
+    "inputTokens": 3993,
+    "outputTokens": 67,
+    "apiCost": null
+  },
+  "model": {
+    "mode": "offline",
+    "provider": "offline",
+    "id": "deterministic-policy"
+  },
+  "clock": {
+    "source": "fixed",
+    "asOf": "2026-10-30T12:00:00.000Z"
+  },
+  "datasetVersion": "2026-10-30-v1",
+  "input": {
+    "requestId": "offline-deadline-failure",
+    "topic": "字幕功能推广活动",
+    "budget": 10,
+    "deadline": "2026-10-30T12:10:00.000Z",
+    "preferredStrategy": "premium"
+  },
+  "status": "incomplete",
+  "code": "NO_FEASIBLE_PLAN",
+  "reason": "尚未保存可行方案。表内最低预算为 4 单位、最短耗时为 30 分钟；预算缺口 0 单位、最小时间缺口 20 分钟。",
+  "estimate": {
+    "strategy": "premium",
+    "lines": [
+      {
+        "item": "素材 A01",
+        "cost": 0,
+        "minutes": 0
+      },
+      {
+        "item": "脚本制作",
+        "cost": 4,
+        "minutes": 20
+      },
+      {
+        "item": "精制演示",
+        "cost": 8,
+        "minutes": 70
+      }
+    ],
+    "totalCost": 12,
+    "durationMinutes": 90,
+    "projectedFinish": "2026-10-30T13:30:00.000Z",
+    "overBudget": 2,
+    "lateMinutes": 80,
+    "feasible": false,
+    "scriptId": "S-278a464a934d",
+    "dataHash": "50ed5436a74593d7d5e3ea599e2506418b1758ac8c4413403ecc9da3593a517d",
+    "calculatedAt": "2026-10-30T12:00:00.000Z"
+  },
+  "constraints": {
+    "minimumRequiredBudget": 4,
+    "minimumDurationMinutes": 30,
+    "budgetShortfall": 0,
+    "timeShortfallMinutes": 20
+  },
+  "resumed": false
+}

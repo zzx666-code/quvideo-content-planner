@@ -1,0 +1,11 @@
+{
+  "name": "budget-replan",
+  "passed": true,
+  "expected": "completed",
+  "actual": "completed",
+  "code": "COMPLETED",
+  "cost": 8,
+  "turns": 6,
+  "toolCalls": 6,
+  "durationMs": 6387
+}

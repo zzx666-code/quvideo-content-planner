@@ -1,0 +1,10 @@
+{
+  "name": "no-materials",
+  "passed": true,
+  "expected": "incomplete",
+  "actual": "incomplete",
+  "code": "NO_MATERIALS",
+  "turns": 3,
+  "toolCalls": 2,
+  "durationMs": 6
+}

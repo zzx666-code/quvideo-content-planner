@@ -1,0 +1,129 @@
+{
+  "id": "P-real-tool-failure",
+  "request": {
+    "requestId": "real-tool-failure",
+    "topic": "字幕功能推广活动",
+    "budget": 10,
+    "deadline": "2030-10-31T10:00:00.000Z",
+    "preferredStrategy": "premium"
+  },
+  "requestHash": "375631c0894c03e9d9761dc81dfc4a5b21ff56c37b7aa7e5d8dcf544a5519cd5",
+  "dataHash": "50ed5436a74593d7d5e3ea599e2506418b1758ac8c4413403ecc9da3593a517d",
+  "script": {
+    "id": "S-0bace071f8a0",
+    "title": "字幕功能推广活动",
+    "strategy": "balanced",
+    "assetIds": [
+      "A01",
+      "A02",
+      "A03"
+    ],
+    "scenes": [
+      {
+        "order": 1,
+        "assetId": "A01",
+        "visual": "字幕演示素材：展示功能操作",
+        "narration": "演示产品支持为视频添加字幕。"
+      },
+      {
+        "order": 2,
+        "assetId": "A02",
+        "visual": "标题模板素材：展示功能操作",
+        "narration": "合成演示产品提供三种标题模板。"
+      },
+      {
+        "order": 3,
+        "assetId": "A03",
+        "visual": "画面裁剪素材：展示功能操作",
+        "narration": "演示产品支持调整视频画面裁剪区域。"
+      }
+    ]
+  },
+  "assessment": {
+    "strategy": "balanced",
+    "lines": [
+      {
+        "item": "素材 A01",
+        "cost": 0,
+        "minutes": 0
+      },
+      {
+        "item": "素材 A02",
+        "cost": 0,
+        "minutes": 0
+      },
+      {
+        "item": "素材 A03",
+        "cost": 0,
+        "minutes": 0
+      },
+      {
+        "item": "脚本制作",
+        "cost": 3,
+        "minutes": 15
+      },
+      {
+        "item": "标准演示",
+        "cost": 5,
+        "minutes": 45
+      }
+    ],
+    "totalCost": 8,
+    "durationMinutes": 60,
+    "projectedFinish": "2026-10-30T13:00:00.000Z",
+    "overBudget": 0,
+    "lateMinutes": 0,
+    "feasible": true
+  },
+  "savedAt": "2026-10-30T12:00:00.000Z",
+  "activities": [
+    {
+      "id": "activity-1",
+      "task": "素材 A01",
+      "status": "planned",
+      "dependsOn": [],
+      "cost": 0,
+      "minutes": 0
+    },
+    {
+      "id": "activity-2",
+      "task": "素材 A02",
+      "status": "planned",
+      "dependsOn": [
+        "activity-1"
+      ],
+      "cost": 0,
+      "minutes": 0
+    },
+    {
+      "id": "activity-3",
+      "task": "素材 A03",
+      "status": "planned",
+      "dependsOn": [
+        "activity-2"
+      ],
+      "cost": 0,
+      "minutes": 0
+    },
+    {
+      "id": "activity-4",
+      "task": "脚本制作",
+      "status": "planned",
+      "dependsOn": [
+        "activity-3"
+      ],
+      "cost": 3,
+      "minutes": 15
+    },
+    {
+      "id": "activity-5",
+      "task": "标准演示",
+      "status": "planned",
+      "dependsOn": [
+        "activity-4"
+      ],
+      "cost": 5,
+      "minutes": 45
+    }
+  ]
+}

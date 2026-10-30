@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-30T13:18:47.978Z",
+  "reviewMode": "Self-review: correctness, readability, architecture, security, performance; no independent reviewer claimed.",
+  "passed": true,
+  "tests": 21,
+  "offlineCases": 12,
+  "realModeCases": 6,
+  "localMarkdownLinksChecked": 41,
+  "filesScannedForActualKey": 130,
+  "implementationHash": "8f9d075726aed0134617166cf893568822b815d22cb1517ddca2661f73dcf691",
+  "evidenceMatchesSource": true,
+  "savedFilesMatchOutputs": true,
+  "actualKeyFoundInDeliverables": false,
+  "auditKnownVulnerabilities": 0
+}
