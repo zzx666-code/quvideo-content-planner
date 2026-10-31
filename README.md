@@ -79,6 +79,6 @@ npm start -- --input examples/inputs/budget-replan.json --mode offline --root .r
 
 当前覆盖本题必验场景，并实现显式失败续跑。语义检索质量、生产级并发、真实素材服务、实际内容制作和发布不在本次范围；更换模型后的可靠性需要重新评估。
 
-GitHub 仓库：[zzx666-code/quvideo-content-planner](https://github.com/zzx666-code/quvideo-content-planner)，当前为私有仓库。评审前需确保指定评审账号具有读取权限。
+GitHub 仓库：[zzx666-code/quvideo-content-planner](https://github.com/zzx666-code/quvideo-content-planner)，当前为公开仓库，可直接查看代码、文档与验收材料。
 
-考核提交信息为题号 2、上述仓库 URL、最终 `git rev-parse HEAD`。代码与验收材料已上传；网页填写与交卷尚未执行。
+考核提交信息为题号 2、上述仓库 URL、最终 `git rev-parse HEAD`。代码与验收材料已上传；网页交卷尚未执行。

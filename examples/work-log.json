@@ -12,9 +12,8 @@
     "realModelScenarios": 4
   },
   "remaining": [
-    "Reviewer access for the private GitHub repository",
-    "final repository URL and commit SHA submission on assessment site"
+    "assessment page final submission"
   ],
   "repositoryUrl": "https://github.com/zzx666-code/quvideo-content-planner",
-  "repositoryVisibility": "private"
+  "repositoryVisibility": "public"
 }
